@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class ContactModel extends Model
 {
     protected $table = "Contact"; //table name
+    public $timestamps = false; // not using default timestamp
+
     protected $fillable = [
         'id',
-        'firstname',
-        'lastname',
+        'firstName',
+        'lastName',
         'email',
         'age',
         'salary',

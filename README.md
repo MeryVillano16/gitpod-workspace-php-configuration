@@ -22,3 +22,8 @@ GET RESTFUL API
     ];
     go to controller: use App\Http\Controllers\Controller;
      and this inside function  return response()->json(ContactModel::get(), 200);
+
+
+     UI
+     1. contactview.blade.php
+     2. controller copy code
