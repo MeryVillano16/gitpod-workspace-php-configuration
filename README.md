@@ -1,0 +1,1 @@
+# gitpod-workspace-php-configuration
