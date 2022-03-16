@@ -13,6 +13,15 @@
     
     <div class"container">
         <div class="jumbotron">
+
+        <!---to display message-->
+        @if(\Session::has('success'))
+        <div>
+            <h4>{{ \Session::get('success') }}</h4>
+        </div>
+        <hr>
+        @endif
+
             <h1>Contacts</h1>
             <hr>
                 <div class="line" style="text-align:right;">
@@ -44,8 +53,12 @@
                             <td>{{$row->age}}</td>
                             <td>{{$row->salary}}</td>
                             <td>{{$row->address}}</td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <a href="click_edit/{{ $row->id }}" class="btn btn-success">Edit</a>
+                            </td>
+                            <td>
+                               <a href="/click_delete/{{$row->id}}" class="btn btn-danger"> Delete</a>
+                            </td>
                             </tr>
                             @endforeach
                         </tbody>
