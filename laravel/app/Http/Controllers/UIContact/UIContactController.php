@@ -26,7 +26,7 @@ class UIContactController extends Controller
         DB::insert('insert into Contact (firstName,lastName,email,age,salary,address) values (?,?,?,?,?,?)'
         ,[$firstName,$lastName,$email,$age,$salary,$address]); //take the value from the input and store in DB
 
-        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-eu34.gitpod.io/contactadd')->with('success', 'Data Saved'); //redirect to path /contact refer in route
+        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-us38.gitpod.io/contactview')->with('success', 'Data Saved'); //redirect to path /contact refer in route
     }
 //get
     public function viewform()
@@ -62,7 +62,7 @@ class UIContactController extends Controller
         DB::update('update Contact set firstName=?, lastName=?, email=?, age=?, salary=?, address=? where id = ?'
         ,[$firstName,$lastName,$email,$age,$salary,$address, $id]); //take the value from the input and store in DB
 
-        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-eu34.gitpod.io/contactview')->with('success', 'Data Updated'); //redirect to path /contact refer in route
+        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-us38.gitpod.io/contactview')->with('success', 'Data Updated'); //redirect to path /contact refer in route
   
     }
 
@@ -70,7 +70,7 @@ class UIContactController extends Controller
     public function delete_function($id)
     {
         DB::delete('delete from Contact where id = ?',[$id]);
-        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-eu34.gitpod.io/contactview')->with('success','Data Deleted');
+        return redirect('https://8000-meryvillano16-gitpodwork-c6robl7tl7w.ws-us38.gitpod.io/contactview')->with('success','Data Deleted');
     }
 
 }
